@@ -39,8 +39,8 @@ class Ics implements Generator
             $url[] = 'DTSTART:'.$link->from->format($dateTimeFormat);
             $url[] = 'DURATION:P1D';
         } else {
-            $url[] = 'DTSTART;TZID='.$link->from->format($dateTimeFormat);
-            $url[] = 'DTEND;TZID='.$link->to->format($dateTimeFormat);
+            $url[] = 'DTSTART;VTIMEZONE='.$link->from->format($dateTimeFormat);
+            $url[] = 'DTEND;VTIMEZONE='.$link->to->format($dateTimeFormat);
         }
 
         if ($link->description) {
